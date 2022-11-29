@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import axios from "axios";
 import Header from '../header/Header';
 import Commit from '../commit/Commit';
@@ -22,7 +22,7 @@ const Main = () => {
         )
     }
 
-    const start = async (repo) => {
+    const start = useCallback(async (repo) => {
         const baseURL = `http://localhost:3000`;
 
         const req = axios.create({
@@ -45,11 +45,11 @@ const Main = () => {
 
         setCommits(commits);
         setLoading(false);
-    }
+    }, []);
 
     useEffect(() => {
         start(repo);
-    }, [])
+    }, [start, repo])
 
     const selectRepo = (repo) => {
         setCommits([]);
