@@ -18,7 +18,7 @@ Download this project and run it using the commands below.
 $ npm install
 ```
 
-#### Running the API
+#### Running the Frontend
 
 ```bash
 # Runs the app in the development mode. 
