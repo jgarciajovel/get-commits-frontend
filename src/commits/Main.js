@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import Header from '../header/Header';
 import Commit from '../commit/Commit';
@@ -69,11 +69,11 @@ const Main = () => {
                             <div className='text-xs text-center border-b mb-8'>
                                 <ul className='flex flex-wrap -mb-px'>
                                     <li onClick={() => selectRepo('backend')}>
-                                        <a className={`font-regular cursor-pointer inline-block mt-5 mr-5 pb-3 rounded-t-lg border-b-1 border-transparent ${repo === 'backend' ? ' text-purple-600 hover:text-purple-400 border-b-2 border-purple-600 font-bold' : 'text-gray-600 hover:text-gray-400 border-b-2 font-medium'}`}>BACKEND</a>
+                                        <p className={`font-regular cursor-pointer inline-block mt-5 mr-5 pb-3 rounded-t-lg border-b-1 border-transparent ${repo === 'backend' ? ' text-purple-600 hover:text-purple-400 border-b-2 border-purple-600 font-bold' : 'text-gray-600 hover:text-gray-400 border-b-2 font-medium'}`}>BACKEND</p>
                                     </li>
 
                                     <li onClick={() => selectRepo('frontend')}>
-                                        <a className={`font-regular cursor-pointer inline-block mt-5 mr-5 pb-3 rounded-t-lg border-b-1 border-transparent ${repo === 'frontend' ? ' text-purple-600 hover:text-purple-400 border-b-2 border-purple-600 font-bold' : 'text-gray-600 hover:text-gray-400 border-b-2 font-medium'}`}>FRONTEND</a>
+                                        <p className={`font-regular cursor-pointer inline-block mt-5 mr-5 pb-3 rounded-t-lg border-b-1 border-transparent ${repo === 'frontend' ? ' text-purple-600 hover:text-purple-400 border-b-2 border-purple-600 font-bold' : 'text-gray-600 hover:text-gray-400 border-b-2 font-medium'}`}>FRONTEND</p>
                                     </li>
                                 </ul>
                             </div>
