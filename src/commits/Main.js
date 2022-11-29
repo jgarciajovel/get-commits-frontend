@@ -23,7 +23,7 @@ const Main = () => {
     }
 
     useEffect(() => {
-        const start = async (repo) => {
+        const start = async () => {
             const baseURL = `http://localhost:3000`;
 
             const req = axios.create({

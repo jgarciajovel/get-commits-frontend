@@ -1,4 +1,6 @@
 import React from 'react'
+import moment from 'moment';
+moment().format();
 
 function Commit({name, message, url, date, avatar, type}) {
 
@@ -71,7 +73,7 @@ function Commit({name, message, url, date, avatar, type}) {
                     <p className="mt-1 text-sm text-gray-500">{message}</p>
                 </div>
                 <div className="flex flex-1 items-end justify-between text-sm">
-                    <p className="text-gray-500">{date}</p>
+                    <p className="text-gray-500">{moment(date).format('LLLL')}</p>
                 </div>
             </div>
         </li>
